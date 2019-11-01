@@ -75,7 +75,12 @@ function Switchery(element, options) {
  */
 
 Switchery.prototype.hide = function() {
-  this.element.style.display = 'none';
+  Object.assign(this.element.style, {
+    bottom: '100%',
+    overflow: 'hidden',
+    position: 'fixed',
+    right: '100%'
+  });
 };
 
 /**
